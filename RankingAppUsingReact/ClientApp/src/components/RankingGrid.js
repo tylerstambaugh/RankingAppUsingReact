@@ -9,15 +9,21 @@ const RankingGrid = ({ items, imgArr }) => {
     const cellCollectionWorst = [];
 
 
-    function pushCellMarkupToArr(cellCollection, rankNum, rowLabel) {
-        if (rankNum > 0) {
-            var item = items.find(o => o.ranking === rankNum);
-            cellCollection.push(<div id={`rank-${rankNum}`} className="rank-cell"></div>);
-        }
-        else {
-            cellCollection.push(<div className="row-label">
-                <h4>{rowLabel}</h4>
-            </div>);
+    return (
+        <div className="rankings">
+            {createRankingGrid()}
+        </div>
+    )
+
+    function createRankingGrid() {
+        createRows();
+        return getRowsForGrid();
+    }
+
+    function createRows() {
+        const maxRows = 4;
+        for (var row = 1; row <= maxRows; row++) {
+            createCellsForRow(row);
         }
     }
 
@@ -51,14 +57,20 @@ const RankingGrid = ({ items, imgArr }) => {
         }
     }
 
-    function createCellsForRows() {
-        const maxRows = 4;
-        for (var row = 1; row <= maxRows; row++) {
-            createCellsForRow(row);
+    function pushCellMarkupToArr(cellCollection, rankNum, rowLabel) {
+        if (rankNum > 0) {
+            var item = items.find(o => o.ranking === rankNum);
+            cellCollection.push(<div id={`rank-${rankNum}`} className="rank-cell"></div>);
+        }
+        else {
+            cellCollection.push(<div className="row-label">
+                <h4>{rowLabel}</h4>
+            </div>);
         }
     }
 
-    function createRowsForGrid() {
+
+    function getRowsForGrid() {
 
         rankingGrid.push(<div className="rank-row top-tier">{ cellCollectionTop }</div>);
         rankingGrid.push(<div className="rank-row middle-tier">{ cellCollectionMiddle }</div>);
@@ -68,16 +80,5 @@ const RankingGrid = ({ items, imgArr }) => {
         return rankingGrid;
     }
 
-    function createRankingGrid() {
-        createCellsForRows();
-        return createRowsForGrid();
-    }
-
-    return (
-        <div className="rankings">
-            {createRankingGrid()}
-        </div>
-
-    )
 }
 export default RankingGrid;
