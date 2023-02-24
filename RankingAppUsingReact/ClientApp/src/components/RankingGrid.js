@@ -44,7 +44,7 @@ const RankingGrid = ({ items, imgArr }) => {
                 currCollection = cellCollectionMiddle;
                 label = "Middle Tier";
             }
-            else if (rowNum === 2) {
+            else if (rowNum === 3) {
                 currCollection = cellCollectionBottom;
                 label = "Bottom Tier";
             }
