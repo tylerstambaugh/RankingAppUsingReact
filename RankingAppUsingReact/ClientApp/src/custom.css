@@ -7,6 +7,13 @@ code {
   color: #E01A76;
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -33,7 +40,7 @@ code {
 
 .rankings {
     width: 800px;
-    diplsay: flex;
+    display: flex;
     justify-content: space-evenly;
     justify-self: center;
     margin-bottom: 15px;
