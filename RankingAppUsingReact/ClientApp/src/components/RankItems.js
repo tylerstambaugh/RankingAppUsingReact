@@ -15,7 +15,7 @@ const RankItems = () => {
         ev.preventDefault();
     }
 
-    function drop() {
+    function drop(ev) {
         ev.preventDefault();
         const targetElm = ev.target;
         if (targetElm.nodeName === "IMG") {
@@ -27,8 +27,6 @@ const RankItems = () => {
                 { ...item, ranking: parseInt(targetElm.id.substring(5)) } : { ...item, ranking: item.ranking });
             setItems(transformedCollection);
         }
-
-
     }
 
     useEffect(() => {
@@ -51,7 +49,9 @@ const RankItems = () => {
                 {
                     (items.length > 0) ? items.map((item) => 
                         <div className="unranked-cell">
-                        <img id={`item-${item.id}`} src={MovieImageArr.find(o => o.id === item.imageId)?.image } />
+                            <img id={`item-${item.id}`} src={MovieImageArr.find(o => o.id === item.imageId)?.image}
+                                style={{ cursor: "pointer" }} draggable="true" onDragStart={drag}
+                            />
                         </div>
                         ) : <div>Loading...</div>
                 }

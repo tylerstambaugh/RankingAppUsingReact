@@ -61,8 +61,8 @@ const RankingGrid = ({ items, imgArr, drag, allowDrop, drop }) => {
         if (rankNum > 0) {
             var item = items.find(o => o.ranking === rankNum);
             cellCollection.push(<div id={`rank-${rankNum}`} onDrop={drop} onDragOver={allowDrop} className="rank-cell">
-                {(item != null) ? <img id={`item-${item.id}`} src={img.Arr.find(o => o.id === item.imaged)?.image} draggable="true" onDragStart={drag} />
-                    : null}
+                {(item != null) ? <img id={`item-${item.id}`} src={imgArr.find(o => o.id === item.imageId)?.image} draggable="true" onDragStart={drag} />
+                                : null}
             </div>);
         }
         else {
@@ -72,9 +72,7 @@ const RankingGrid = ({ items, imgArr, drag, allowDrop, drop }) => {
         }
     }
 
-
     function getRowsForGrid() {
-
         rankingGrid.push(<div className="rank-row top-tier">{ cellCollectionTop }</div>);
         rankingGrid.push(<div className="rank-row middle-tier">{ cellCollectionMiddle }</div>);
         rankingGrid.push(<div className="rank-row bottom-tier">{ cellCollectionBottom }</div>);
@@ -82,6 +80,5 @@ const RankingGrid = ({ items, imgArr, drag, allowDrop, drop }) => {
 
         return rankingGrid;
     }
-
 }
 export default RankingGrid;
