@@ -1,4 +1,4 @@
-﻿import Item from "./Item";
+﻿import Item from './Item';
 
 const ItemCollection = ({ items, drag, imgArr }) => {
     <div className="items-not-ranked">
