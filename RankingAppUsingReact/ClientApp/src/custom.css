@@ -32,9 +32,9 @@ main {
                
 }
 
-.unranked-cell img {
+.unranked-cell img, .rank-cell img{
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 .rankings {
