@@ -44,7 +44,7 @@ const RankItems = () => {
 
         <main>
             <RankingGrid items={items} imgArr={MovieImageArr} drag={drag} allowDrop={allowDrop} drop={drop} />
-            <ItemCollection item={items} drag={drag} imgArr={MovieImageArr} />
+            <ItemCollection items={items} drag={drag} imgArr={MovieImageArr} />
         </main>
     )
 }
