@@ -1,7 +1,7 @@
 ﻿import React, { useState, useEffect } from 'react';
 import MovieImageArr from "./MovieImages.js";
 import RankingGrid from "./RankingGrid.js";
-import ItemCollection from "./ItemCollection.js";
+import ItemCollection from './ItemCollection.js';
 
 const RankItems = () => {
 
