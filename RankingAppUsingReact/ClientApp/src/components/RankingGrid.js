@@ -1,6 +1,4 @@
-﻿
-
-const RankingGrid = ({ items, imgArr, drag, allowDrop, drop }) => {
+﻿const RankingGrid = ({ items, imgArr, drag, allowDrop, drop }) => {
 
     const rankingGrid = [];
     const cellCollectionTop = [];
