@@ -7,7 +7,7 @@ import RideTheLightning from '../images/albums/RideTheLightning.png';
 import RockOrBust from '../images/albums/RockOrBust.png';
 import RustInPeace from '../images/albums/RustInPeace.png';
 import StAnger from '../images/albums/StAnger.png';
-import TheFinalCountDown from '../images/albums/TheFinalCountDown.png';
+import TheFinalCountdown from '../images/albums/TheFinalCountdown.png';
 
 const AlbumImageArr = [
     { if: 1, image: AbbeyRoad },
@@ -19,7 +19,7 @@ const AlbumImageArr = [
     { if: 7, image: RockOrBust },
     { if: 8, image: RustInPeace },
     { if: 9, image: StAnger },
-    { if: 10, image: TheFinalCountDown }
+    { if: 10, image: TheFinalCountdown }
 
 ];
 
